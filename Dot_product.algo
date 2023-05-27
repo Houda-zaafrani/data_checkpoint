@@ -1,0 +1,25 @@
+PROCEDURE Dot product( ps : INTEGER )
+VAR
+    v1,v2 : ARRAY_OF char;
+    i,j : INTEGER :=0;
+BEGIN
+    FOR i FROM 0 TO v1.length-1 STEP step  DO//calculate number of point in v1
+    
+        dot1 := dot1 +1 ;
+    END_FOR
+    FOR i FROM 0 TO v2.length-1 STEP step  DO //calculate number of point in v2
+    
+        dot2 := dot2 +1 ;
+    END_FOR
+    sum := dot1 + dot2; // calculate summe of 2 vector
+    Write(sum);
+END
+
+ALGORITHM algorithm_name
+VAR
+    set_declarations
+BEGIN
+    WHILE (sum /2=0) DO
+        set_instructions
+    END_WHILE
+END
