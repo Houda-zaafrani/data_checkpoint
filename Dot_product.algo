@@ -1,0 +1,44 @@
+//procedure for calculate 2 vectors of IR
+PROCEDURE dot_product(v1,v2)
+VAR
+    v2,v1:FLOAT;
+    
+BEGIN
+    Write("give me the first vecteur");
+    Read(v1);
+     Write("give me the sacend vecteur");
+    Read(v2);
+
+    Write("the result of ps is ps :=",v1 "*" v2);
+END
+//function replace the previous produre
+FUNCTION dot_product (v1,v2) : INTEGER
+VAR
+   v2,v1:FLOAT;
+    ps:float:=0;
+BEGIN
+    Write("give me the first vecteur");
+    Read(v1);
+     Write("give me the sacend vecteur");
+    Read(v2);
+     ps:=v1*v2;
+    Write("the result of ps is "ps);
+    RETURN ps ;
+END
+//begining of algorithm
+ALGORITHM Dot_product
+VAR
+    vect1,vect2:FLOAT;
+    n,nbr_point: INTEGER;
+BEGIN
+ Write("give the number of vectors");
+ Read(n);
+    WHILE (n % 2 := 0) DO//if numbers of vectors pairs
+    (PROCEDURE dot_product (vect1,vect2)
+    IF (vect1 * vect2 :=0)) THEN //if vectors vect1 vect2 are orthogonal 
+    
+        nbr_point := nbr_point + 1;//incremante nbr of point
+    END_IF
+    END_WHILE
+    Write("the number of point is",nbr_point);
+END
